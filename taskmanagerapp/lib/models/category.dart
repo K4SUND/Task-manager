@@ -1,8 +1,8 @@
 class Category {
-  final String id;
-  String name;
-  String description;
-  String icon;
+  final int id;
+  final String name;
+  final String description;
+  final String icon;
 
   Category({
     required this.id,

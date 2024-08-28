@@ -1,8 +1,8 @@
 class Notification {
-  final String id;
+  final int id;
   final int taskId;
-  DateTime notificationDate;
-  String message;
+  final DateTime notificationDate;
+  final String message;
 
   Notification({
     required this.id,
