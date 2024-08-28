@@ -1,7 +1,7 @@
 class RecycleBin {
-  final String id;
+  final int id;
   final int taskId;
-  DateTime deleteDate;
+  final DateTime deleteDate;
 
   RecycleBin({
     required this.id,

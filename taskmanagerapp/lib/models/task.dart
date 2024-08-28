@@ -1,15 +1,15 @@
 class Task {
-  int id;
-  String title;
-  String description;
-  String category;
-  DateTime dueDate;
-  DateTime dueTime;
+  final int id;
+  final String title;
+  final String description;
+  final String category;
+  final DateTime dueDate;
+  final String dueTime;
   Duration remainingTime;
-  int priority;
-  String status;
-  bool isOverdue;
-  bool onNotifications;
+  final int priority;
+  final String status;
+  final bool isOverdue;
+  final bool onNotifications;
 
   Task({
     required this.id,
@@ -46,6 +46,7 @@ class Task {
   }
 
   void calculateRemainingTime() {
-    // Implementation
+    final now = DateTime.now();
+    remainingTime = dueDate.difference(now);
   }
 }

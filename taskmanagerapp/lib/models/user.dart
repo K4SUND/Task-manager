@@ -1,11 +1,11 @@
 class User {
-  int id;
-  String name;
-  String email;
-  String password;
-  String authenticationMethod;
-  DateTime birthDay;
-  int statusAboutDays;
+  final int id;
+  final String name;
+  final String email;
+  final String password;
+  final String authenticationMethod;
+  final DateTime birthDay;
+  String statusAboutDays;
 
   User({
     required this.id,
@@ -37,7 +37,7 @@ class User {
     // Implementation
   }
 
-  void updateStatus() {
-    // Implementation
+  void updateStatus(String status) {
+    statusAboutDays = status;
   }
 }
