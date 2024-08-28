@@ -1,3 +1,5 @@
+import 'package:taskmanagerapp/models/task.dart';
+
 class RecycleBin {
   final int id;
   final int taskId;
@@ -10,7 +12,7 @@ class RecycleBin {
   });
 
   // Methods for recycle bin management
-  void restoreTask() {
+  void restoreTask(Task task) {
     // Restore task logic here
   }
 
