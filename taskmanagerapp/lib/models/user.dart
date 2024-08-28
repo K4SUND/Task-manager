@@ -1,3 +1,5 @@
+import 'package:intl/intl.dart';
+
 class User {
   final int id;
   final String name;
@@ -5,7 +7,7 @@ class User {
   final String password;
   final String authenticationMethod;
   final DateTime birthDay;
-  String statusAboutDays;
+  final Map<String, String> statusByDay;
 
   User({
     required this.id,
@@ -14,7 +16,7 @@ class User {
     required this.password,
     required this.authenticationMethod,
     required this.birthDay,
-    required this.statusAboutDays,
+    required this.statusByDay,
   });
 
   void login() {
@@ -37,7 +39,12 @@ class User {
     // Implementation
   }
 
-  void updateStatus(String status) {
-    statusAboutDays = status;
+  void updateStatus(String day, String status) {
+    statusByDay[day] = status;
+  }
+
+  String getStatusForToday() {
+    final today = DateFormat('EEEE').format(DateTime.now());
+    return statusByDay[today] ?? 'No status for today';
   }
 }
