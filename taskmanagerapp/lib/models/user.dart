@@ -1,5 +1,4 @@
 import 'package:intl/intl.dart';
-import 'package:taskmanagerapp/models/task.dart';
 
 class User {
   final int id;
